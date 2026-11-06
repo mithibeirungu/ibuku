@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: <%= ENV.fetch("POSTGRES_HOST") { "localhost" } %>
+  username: <%= ENV.fetch("POSTGRES_USER") { "postgres" } %>
+  password: <%= ENV.fetch("POSTGRES_PASSWORD") { "postgres" } %>
+  port: <%= ENV.fetch("POSTGRES_PORT") { 5432 } %>
+
+development:
+  <<: *default
+  database: ibuku_development
+
+test:
+  <<: *default
+  database: ibuku_test
+
+production:
+  <<: *default
+  database: <%= ENV.fetch("POSTGRES_DB") { "ibuku_production" } %>
+  url: <%= ENV['DATABASE_URL'] %>
+

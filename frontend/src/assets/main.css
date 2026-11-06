@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #fbf1c7;
+    color: #3c3836;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Custom Gruvbox Components */
+.gruvbox-card {
+  background-color: #f2e5bc;
+  border: 1px solid #d5c4a1;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px -2px rgba(60, 56, 54, 0.05);
+}
+
+.gruvbox-input {
+  background-color: #fdf6e2;
+  border: 1px solid #d5c4a1;
+  color: #3c3836;
+  font-family: 'JetBrains Mono', monospace;
+  outline: none;
+  transition: all 0.15s ease-in-out;
+}
+
+.gruvbox-input:focus {
+  border-color: #79740e;
+  box-shadow: 0 0 0 2px rgba(121, 116, 14, 0.2);
+}
+
+.btn-gruvbox-primary {
+  background-color: #79740e;
+  color: #fbf1c7;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-gruvbox-primary:hover:not(:disabled) {
+  background-color: #635f0a;
+}
+
+.btn-gruvbox-primary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.btn-gruvbox-secondary {
+  background-color: #ebdbb2;
+  color: #3c3836;
+  border: 1px solid #d5c4a1;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  transition: background-color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-gruvbox-secondary:hover:not(:disabled) {
+  background-color: #e0d3b6;
+}
+
+.parchment-frame {
+  background-color: #fffdf7;
+  border: 1px solid #d5c4a1;
+  box-shadow: inset 0 0 15px rgba(215, 153, 33, 0.08);
+}
+
+/* Print specific styles */
+@media print {
+  body {
+    background: white !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+

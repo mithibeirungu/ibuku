@@ -1,0 +1,4 @@
+# Load the Rails application and its tasks.
+require_relative "config/application"
+
+Rails.application.load_tasks

@@ -1,0 +1,12 @@
+<h2>IBUKU Cryptographic Ledger Authentication</h2>
+<p>Hello <%= @admin.name %>,</p>
+<p>You requested administrative entry to the IBUKU Certificate Provisioning Console. Please use the one-time authentication code below:</p>
+
+<div class="code"><%= @otp %></div>
+
+<p><strong>Note:</strong> This OTP is valid for <%= @expires_in_minutes %> minutes. If you did not request this code, no action is necessary.</p>
+
+<div class="footer">
+  &copy; 2026 IBUKU Registrar Ledger &bull; Protocol v1.42 Gruvbox
+</div>
+
